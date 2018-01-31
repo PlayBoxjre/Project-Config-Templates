@@ -64,15 +64,14 @@ spring AOP的缺陷：1）spring AOP只提供到方法层面的切入，如果�
 
 需要两个注解：@Configuration和@EnableAspectJAutoProxy
 
-*@Configuration*
-
-*@EnableAspectJAutoProxy*
-
-**public class** AppConfig {
-
- 
-
+```java
+@Configuration
+@EnableAspectJAutoProxy
+public class  AppConfig {
 }
+```
+
+
 
 ### **用XML的方式开启@AspectJ支持**
 
@@ -206,10 +205,10 @@ idOrNameOfBean代表任意spring bean的名称：支持有限制的通配符（*
 **[java]** [view plain](http://blog.csdn.net/lh87522/article/details/42647085#) [copy](http://blog.csdn.net/lh87522/article/details/42647085#)
 
 1. package com.business.aop;  
-2.   
+2. ​
 3. import org.aspectj.lang.annotation.Aspect;  
 4. import org.aspectj.lang.annotation.Pointcut;  
-5.   
+5. ​
 6. @Aspect  
 7. public class SystemArchitecture {  
 8. ​    /** 
@@ -638,7 +637,7 @@ After-throwing advice在连接点抛出异常后执行。用@AfterThrowing注解
 
 *       pointcut="com.xyz.myapp.SystemArchitecture.dataAccessOperation()",*
 
-*        throwing="ex")*
+*       throwing="ex")*
 
 ​    **public void** doRecoveryActions(DataAccessException ex) {
 
@@ -1792,9 +1791,7 @@ ms    %     Task name
 
 引入的定义采用标签<aop:declare-parents>，它也是<aop:aspect>的子标签。这个标签说明匹配的类型将有一个新的父类。例如，给定一个接口UsageTracked，和其实现类DefaultUsageTracked，下面的切面申明，所有实现了service接口的实现类也都将实现UsageTracked接口。
 
-<aop:aspect id="usageTrackerAspect" ref="usageTracking">
-
- 
+<aop:aspect id="usageTrackerAspect" ref="usageTracking"> 
 
 ​    <aop:declare-parents
 
