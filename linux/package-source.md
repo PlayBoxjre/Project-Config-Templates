@@ -2,6 +2,27 @@
 
 http://wiki.ubuntu.org.cn/
 
+```
+deb http://cn.archive.ubuntu.com/ubuntu/ xenial main restricted universe multiverse
+deb http://cn.archive.ubuntu.com/ubuntu/ xenial-security main restricted universe multiverse
+deb http://cn.archive.ubuntu.com/ubuntu/ xenial-updates main restricted universe multiverse
+deb http://cn.archive.ubuntu.com/ubuntu/ xenial-backports main restricted universe multiverse
+##測試版源
+deb http://cn.archive.ubuntu.com/ubuntu/ xenial-proposed main restricted universe multiverse
+# 源碼
+deb-src http://cn.archive.ubuntu.com/ubuntu/ xenial main restricted universe multiverse
+deb-src http://cn.archive.ubuntu.com/ubuntu/ xenial-security main restricted universe multiverse
+deb-src http://cn.archive.ubuntu.com/ubuntu/ xenial-updates main restricted universe multiverse
+deb-src http://cn.archive.ubuntu.com/ubuntu/ xenial-backports main restricted universe multiverse
+##測試版源
+deb-src http://cn.archive.ubuntu.com/ubuntu/ xenial-proposed main restricted universe multiverse
+# Canonical 合作夥伴和附加
+deb http://archive.canonical.com/ubuntu/ xenial partner
+deb http://extras.ubuntu.com/ubuntu/ xenial main
+```
+
+
+
 # 更改pip源至国内镜像，显著提升下载速度
 
 **pip国内的一些镜像**
